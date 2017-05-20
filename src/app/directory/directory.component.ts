@@ -11,15 +11,13 @@ import { DataService } from '../data.service';
 })
 export class DirectoryComponent implements OnInit {
 
-  ninjas = [
-    { name: 'Yoshi', belt: 'black' },
-    { name: 'Ryu', belt: 'red' },
-    { name: 'Crystal', belt: 'purple' }
-  ];
+  ninjas = [];
   constructor(private logger: LoggingService, private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.fetchData();
+    this.dataService.fetchData().subscribe(
+      (data) => this.ninjas = data
+    );
   }
 
   logIt() {
