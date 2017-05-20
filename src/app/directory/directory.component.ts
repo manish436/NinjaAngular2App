@@ -7,15 +7,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./directory.component.css']
 })
 export class DirectoryComponent implements OnInit {
+
   ninjas = [
-    { name: 'Yoshoki', belt: 'black' },
-    { name: 'Rey', belt: 'red' },
-    { name: 'Christal', belt: 'purple' }
+    { name: 'Yoshi', belt: 'black' },
+    { name: 'Ryu', belt: 'red' },
+    { name: 'Crystal', belt: 'purple' }
   ];
-
-  constructor() {
-
-  }
+  constructor() { }
 
   ngOnInit() {
   }
