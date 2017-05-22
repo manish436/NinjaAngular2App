@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  name = 'ninja';
+  ninja = {
+    name: 'Reu',
+    belt: 'black'
+  };
+
+  yell(e) {
+    alert('I am Yelling from Home component!');
+    console.log(e);
+  }
 }

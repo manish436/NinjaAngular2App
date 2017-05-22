@@ -4,15 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { DirectoryComponent } from './directory/directory.component';
+import { appRouterModule } from './app.routes';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    DirectoryComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    appRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
